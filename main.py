@@ -34,15 +34,25 @@ def l1_norm(list1, list2):
 def euclidean_distance(list1, list2):
     result = 0
 
-    return result
+    for i in range(len(list1)):
+        result += (list1[i] - list2[i]) ** 2
+
+    return result ** 0.5
 
 def linf_norm(list1, list2):
     result = 0
+
+    for i in range(len(list1)):
+        diff = abs(list1[i] - list2[i])
+        result = max(result, diff)
     
     return result
 
 
 def get_lists(choice):
+    if choice not in ['1', '2', '3', '4', '5'] and choice not in ['X', 'x']:
+        return
+
     list1 = input("Enter the first list of numbers (comma-separated): ")
     list2 = input("Enter the second list of numbers (comma-separated): ")
 
@@ -59,8 +69,6 @@ def get_lists(choice):
         print(f"Euclidean Distance: {euclidean_distance(list1, list2)}")
     elif choice == '5':
         print(f"L-Infinity Norm: {linf_norm(list1, list2)}")
-    else:
-        print("Invalid choice. Try again.")
 
 def main():
     print("480 Practice Similairty Algorithms")
@@ -74,7 +82,7 @@ def main():
 
     choice = input("Select an option (1-5): ")
 
-    while choice != 'X' and choice in ['1', '2', '3', '4', '5']:
+    while choice != 'X' and choice != 'x':
         get_lists(choice)
         choice = input("Select an option (1-5) or 'X' to exit: ")
 
