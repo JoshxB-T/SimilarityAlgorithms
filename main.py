@@ -1,3 +1,29 @@
+def inner_product(list):
+    result = 0;
+
+
+    return result
+
+def cosine_similarity(list):
+    result = 0;
+
+    return result
+
+def l1_norm(list):
+    result = 0
+
+    return result
+
+def euclidean_distance(list):
+    result = 0
+
+    return result
+
+def linf_norm(list):
+    result = 0
+    
+    return result
+
 def main():
     print("480 Practice Similairty Algorithms")
     print("----------------------------------")
