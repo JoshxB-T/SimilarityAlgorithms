@@ -1,25 +1,24 @@
-def inner_product(list):
-    result = 0;
-
-
-    return result
-
-def cosine_similarity(list):
+def inner_product(list1, list2):
     result = 0;
 
     return result
 
-def l1_norm(list):
+def cosine_similarity(list1, list2):
+    result = 0;
+
+    return result
+
+def l1_norm(list1, list2):
     result = 0
 
     return result
 
-def euclidean_distance(list):
+def euclidean_distance(list1, list2):
     result = 0
 
     return result
 
-def linf_norm(list):
+def linf_norm(list1, list2):
     result = 0
     
     return result
