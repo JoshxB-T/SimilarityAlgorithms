@@ -9,6 +9,18 @@ def inner_product(list1, list2):
 def cosine_similarity(list1, list2):
     result = 0;
 
+    numerator = inner_product(list1, list2)
+
+    denom1 = 0
+    for x in list1:
+        denom1 += x * x
+
+    denom2 = 0
+    for x in list2:
+        denom2 += x * x
+
+    result =  numerator / ((denom1 ** 0.5) * (denom2 ** 0.5))
+
     return result
 
 def l1_norm(list1, list2):
@@ -59,7 +71,7 @@ def main():
 
     choice = input("Select an option (1-5): ")
 
-    while choice != 'X':
+    while choice != 'X' and choice in ['1', '2', '3', '4', '5']:
         get_lists(choice)
         choice = input("Select an option (1-5) or 'X' to exit: ")
 
