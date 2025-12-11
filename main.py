@@ -26,6 +26,9 @@ def cosine_similarity(list1, list2):
 def l1_norm(list1, list2):
     result = 0
 
+    for i in range(len(list1)):
+        result += abs(list1[i] - list2[i])
+
     return result
 
 def euclidean_distance(list1, list2):
